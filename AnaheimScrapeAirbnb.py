@@ -809,18 +809,18 @@ if __name__ == '__main__':
     #Take The Main Results From Previous Step and Iterate Through Each Listing
     #To add more detail
     DetailResults = iterateDetail(MainResults[:200])
-    print DetailResults
+    # print DetailResults
     arr = []
 
     for result in DetailResults:
         print type(result['S_Bedrooms'])
         if(result['S_Bedrooms'] == '3' or result['S_Bedrooms'] == '4' or result['S_Bedrooms'] == '5' or result['S_Bedrooms'] == '6'):
             arr.append(result)
-            print "keep"
+            # print "keep"
         else:
             print "toss"
-    print len(arr)    
-    print arr
+    # print len(arr)    
+    # print arr
     
     #Write Out Results To CSV File, using function I defined
     writeToCSV(arr, 'AnaheimHouses.csv')
